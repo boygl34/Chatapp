@@ -1,10 +1,13 @@
 import { Server } from 'socket.io';
 
 export default function injectSocketIO(server) {
-    const io = new Server(server,{
-        cors: { origin: '*' },
-      });
-
+    const io = new Server(server, {
+        cors: { 
+            origin: 'http://chatapp-ek0.pages.dev/',
+            methods: ["GET", "POST"]
+        },
+    });
+    
     io.on('connection', (socket) => {
         let username = `User ${Math.round(Math.random() * 999999)}`;
         socket.emit('name', username);
