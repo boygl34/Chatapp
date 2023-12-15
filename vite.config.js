@@ -4,6 +4,7 @@ import { webSocketServer } from './webSocketPluginVite';
 // /** @type {import('vite').UserConfig} */
 const config = {
     server: {
+        cors: false,
         port: 3000
     },
     preview: {
