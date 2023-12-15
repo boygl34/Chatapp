@@ -3,7 +3,7 @@ import { Server } from 'socket.io';
 export default function injectSocketIO(server) {
     const io = new Server(server, {
         cors: { 
-            origin: 'http://chatapp-ek0.pages.dev/',
+            origin: 'https://chatapp-ek0.pages.dev/',
             methods: ["GET", "POST"]
         },
     });
